@@ -1,0 +1,99 @@
+1. Convertir el binario 101001010101 en octal y en hexadecimal
+
+Conversión a octal:
+Se separa en grupos de 3 y cada grupo es un número en base octal:
+
+101  001  010  101 = 5125
+
+Conversión a hexadecimal:
+Se separan en grupos de 4 y cada grupo es un número en base hexadecial:
+
+1010  0101  0101 = A55
+
+2. Convierte 0xC0FEE hexadecimal a octal
+
+Primero convertimos el numero en binario, cada letra y/o número corresponde a un grupo de 4 bits
+C = 12 = 1100
+0 = 0  = 0000
+F = 15 = 1111
+E = 14 = 1110
+E = 14 = 1110
+
+El numero en binario seria: 11000000111111101110
+
+Luego pasarlo a octal searando en grupos de 3, en caso que uno quede incompleto se le agregan ceros:
+
+011 000 000 111 111 101 110 = 3007756
+
+3. Dado los números signados de 8 bits p = 01110000 y q = 01110000 realizar la suma p + q e indique el resultado en decimal y binario. Tener en cuenta la cantidad de bits
+
+	0 1 1 1 0 0 0 0
+     +  0 1 1 1 0 0 0 0
+	---------------
+	1 1 1 0 0 0 0 0
+
+p + q = 11100000
+En decimal seria 1*128 + 1*64 + 1*32 = 224
+
+4. Dado los números signados de 8 bits p = 01111000 y q = 0001000 realizar la resta p - q e indique el resultado en decimal y binario. Tener en cuenta la cantidad de bits.
+ 
+
+	0 1 1 1 1 0 0 0
+      - 0 0 0 0 1 0 0 0
+       ----------------
+        0 1 1 1 0 0 0 0
+
+El resultado de la resta p - q es 1110000
+
+En decimal es 1*64 + 1*32 + 1*16 = 112
+
+5. Convertir el numero 254,125 de decimal a formato IEEE754, indicando los pasos utilizados para calcular:
+
+a) Signo
+b) Exponente
+c) Mantisa
+
+Vamos a utilizar para 32 bits (simple precisión)
+
+a) Signo: 1 bit (bit 31)
+b) Exponente: 8 bits (bit 30 a 23)
+c) Mantisa: 23 bits (bit 22 a 0)
+
+a) El signo es 0 ya que es positivo
+
+b) Para calcular el exponente se debe pasar la parte entera a binario:
+
+254 = 11111110
+
+Luego pasar la parte fraccionaria a binario:
+
+,001
+
+el numero entero mover la coma hasta el 1 más significativo:
+
+1,1111110001 x 2^7 
+
+El exponente conseguido se le debe sumar 127 y se consigue 134, pasandolo a binario nos queda:
+
+134 = 10000110
+
+Este es el valor de Exponente = 10000110
+
+c) La mantisa son todos los valores despues del '1,' y se los completa con 0 hasta los 23 bits:
+
+11111100010000000000000
+
+Nos quedaria como resultado final:
+
+0 10000110 11111100010000000000000
+6. Realizar la suma p + r, donde p = 35(decimal) y r = 0xAF(hexadecimal). Considerar ambos como números signados de 8 bits. Expresar el resultado en decimal y binario. Tener en cuenta la cantidad de bits.
+
+r = 0xAF = 10101111 = 175(decimal)
+
+	35
+     + 175
+      ------
+       210
+
+El resultado es 210(decimal) y en binario seria 11010010  
+ 
