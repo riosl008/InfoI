@@ -1,3 +1,8 @@
+Estudiante: Rios Leonel
+Legajo: 94637
+Curso: 1R7
+---------------------------------------------------------------------------------------------------
+
 1. Convertir el binario 101001010101 en octal y en hexadecimal
 
 Conversión a octal:
