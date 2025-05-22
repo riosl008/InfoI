@@ -5,7 +5,7 @@ int main (void)
   int calif;
   char letra;
 
-  printf("Ingresar la calificación: ");
+  printf("Ingresar la calificacion: ");
   scanf("%d", &calif);
 
   if (calif >= 90)
@@ -24,7 +24,7 @@ int main (void)
 	    letra = 'F';
 
 
-  printf("Calificación: %c\n", letra);
+  printf("Calificacion: %c\n", letra);
 
 return 0;
 }
